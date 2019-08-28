@@ -30,5 +30,4 @@ function refreshCell(){
       xhttp.send();
     },5000);
 
-</script>
 }
