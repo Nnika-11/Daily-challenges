@@ -1,3 +1,4 @@
 # Software-development
 Software Development tasks and solves
-Each file have a description of what was the goal and tasks. ideas how it could be solved
+
+Each folder have a file with description of what was the goal and tasks. And file(s) with ideas how it could be solved. Please fill free to contribute any desisions you have.
