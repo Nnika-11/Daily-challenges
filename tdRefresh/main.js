@@ -53,24 +53,35 @@ function refreshCell(){
 
 }
 
-//array of cells
+//array of cells n different pages
+
+
+//have it in script on a cgi page
+setInterval(function refreshCells(){
+  	refreshCells(["sensor1_ID","sensor2_ID"],"sensor_page1.cgi");
+    refreshCells(["sensor3_ID","sensor1_ID"],"sensor_page2.cgi");
+},5000);
+
+//js function
 function refreshCell(cells, page){
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      var str=this.responseText
-      cells.forEach(function(cellId){
-        //here was added var "cellId" to regexp
-        var regexText = new RegExp('<td.*'+cellId+'[^>]+>([^<]+)<');
-        //to get text color of the cell
-        var regexColor = new RegExp('<td.*'+cellId+'.*color\:([^;]+)');
-        document.getElementById(cellId).innerHTML = str.match(regexText)[1];
-        document.getElementById(cellId).style.color = str.match(regexColor)[1];
-      });
-    }
-  };
-  xhttp.open("GET", page, true);
-  xhttp.send();
-}
+  
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        var str=this.responseText
+        cells.forEach(function(cellId){
+          //here was added var "cellId" to regexp
+          var regexText = new RegExp('<td.*'+cellId+'[^>]+>([^<]+)<');
+          //to get text color of the cell
+          var regexColor = new RegExp('<td.*'+cellId+'.*color\:([^;]+)');
+          document.getElementById(cellId).innerHTML = str.match(regexText)[1];
+          document.getElementById(cellId).style.color = str.match(regexColor)[1];
+        });
+      }
+    };
+    xhttp.open("GET", page, true);
+    xhttp.send();
+  }
+
 
 //Any different ideas?
