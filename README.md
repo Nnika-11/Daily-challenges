@@ -5,3 +5,8 @@ Some problems/tasks I solve during my studies and work that could be useful tips
 Each folder have a **main** file with description of what was the goal or problem and my ideas how it could be solved. 
 
 Please fill free to try solve it your way and contribute any desisions you have.
+
+
+  Task | Description | Tools
+--- | --- | ---
+ **tdRefresh** | Some data in table is auto refreshed every 5 seconds | AJAX + RegExp in JavaScript 
