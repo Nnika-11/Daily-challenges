@@ -26,7 +26,7 @@ function refreshBody(){
       //just get the page content I am at
     xhttp.open("GET", "sensors.cgi", true);
     xhttp.send();
-  },10000);
+  },5000);
 }
 
 //refresh one cell
