@@ -1,0 +1,63 @@
+<!--
+The main page I take user data from
+
+where $DATE, $HRS and $MIN are:
+DATE=$(date '+%m/%d/%Y')
+HRS=$(date '+%H')
+MIN=$(date '+%M')
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>NTP_Page</title>
+</head>
+<body>
+  <table align=center cellspacing="5" cellpadding="5">
+    <tr>
+      <td width="50%">Date
+      </td>
+        
+      <td >
+        <input type="text" id="datainput" value="$DATE" size=10>
+      </td>
+    </tr>
+    <tr>
+      <td width="50%">Time
+      </td>
+      <td>
+        <input type="text" id="hrs" value="$HRS" size="1" maxlength="2"> hrs: <input type="text" name="mins" id="mins" VALUE=$MIN size="1" maxlength="2"> mins
+        &nbsp;&nbsp;&nbsp;&nbsp;
+      </td>
+    </tr>
+  <tr>
+    <td width="50%">NTP Enabled
+    </td>
+    <td>
+      <input type="checkbox" onchange="NTPOnChange();" class="DisplayParamsTitle" id="ntp_enable">
+      <span class=DisplayParamsTitle>	Enable</span>
+    </td>
+  </tr>
+  <tr>
+    <td class=DisplayParamsTitle width="50%">Custom NTP servers
+    </td>
+    <td class=DisplayParams>
+
+    <input type="text" size="12" maxlength="15"
+          onclick="noChange();"
+           id="ntp_ip"
+           class="DisplayParamsInput" readonly="readonly"/>
+    </td>
+  </tr>
+<tr><td></td></tr>
+  <tr>
+  <td align=center colspan="2">
+     <input align=center type="button" id="apply_btn" value="Apply" onClick="enable_sysdate();">
+  </td>
+</tr>
+  </table>
+</body>
+</html>
