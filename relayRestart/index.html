@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>UserTable</title>
+    </head>
+    <body>
+        <form>
+        <table align=center cellspacing="5" cellpadding="5">
+        <tr >
+			<td colspan="2">Relay Control
+			</td>
+		</tr>
+		<tr>
+			<td  width="50%" >Reboot relay?
+			</td>
+			<td>
+			<input type="radio" id="relayReboot" name="relayst" value="relayReboot" $RBT>
+			<label for="dewey">Reboot</label>
+			</td>
+		</tr>
+        	<tr>
+			<td width="50%" >Switch
+			</td>
+			<td>
+			<input type="radio" id="relayon" name="relayst" value="relayOn" $ON>
+			<label for="relayon">ON</label>
+			<input type="radio" id="relayoff" name="relayst" value="relayOff" $OFF>
+			<label for="relayoff">OFF</label>
+			</td>
+		</tr>
+        </table>
+        <div align=center  style="padding-top:20px;">
+			<input type="button" value="Apply">
+        </div>
+        </form>
+        
+        
+        	<form name="relay_custom">
+			<table align=center cellspacing="5" cellpadding="5">
+				<tr>
+					<td colspan="2">Custom Reboot
+					</td>
+				</tr>
+				<tr>
+					<td  width="50%" >Reboot every
+					</td>
+					<td >
+						<input type="text" name="hrs" id="hrs" size="1" maxlength="2"> hrs <input type="text" name="mins" id="mins" size="1" maxlength="2"> mins
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<div id="time_error" style="color:red;"> </div>
+					</td>
+				</tr>
+        <tr>
+					<td  width="50%" >Reboot on
+					</td>
+					<td >
+            <label >
+            <input type="checkbox" value="">S
+            </label>
+            <label >
+            <input type="checkbox" value="">M
+            </label>
+            <label >
+            <input type="checkbox" value="">T
+            </label>
+            <label >
+            <input type="checkbox" value="">W
+            </label>
+            <label>
+            <input type="checkbox" value="">T
+            </label>
+            <label >
+            <input type="checkbox" value="">F
+            </label>
+            <label >
+            <input type="checkbox" value="">S
+            </label>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+						<div id="time_error" style="color:red;"> </div>
+					</td>
+				</tr>
+			</table>
+                	<div align="center" style="padding-top:20px;">
+					<button class="ParamsSubmit" type="button"  onClick="this.form.reset();">Reset</button>
+					<input type="button" class="ParamsSubmit" value="Apply" >
+                </div>
+        </form>
+    </body>
+</html>
