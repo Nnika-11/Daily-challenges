@@ -11,3 +11,4 @@ Please fill free to try solve it your way and contribute any desisions you have.
 --- | --- | ---
  **tdRefresh** | Some data in table is auto refreshed every 5 seconds | AJAX + RegExp in JavaScript 
  **NTP_or_User_date** | Set user data and time or enable NTP with NTP ip option changes | bash+html in cgi
+ **relayRestart** | Flexible user restart configuration of the relay | crontab in bash scripts
